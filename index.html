@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JSensei Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- Barba Wrapper -->
+  <div id="barba-wrapper">
+    <div id="barba-container">
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <header class="chat-header">
+          <h3 style="padding: .5rem 1.5rem; border-radius: 30px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); color: yellow; display: inline-block; font-weight: bold;">
+            - JSensei -
+          </h3>
+        </header>
+
+        <main class="chat-box" id="chat-box">
+          <!-- Chat messages injected here -->
+        </main>
+
+        <div class="chat-input-area">
+          <input type="text" id="user-input" placeholder="Ask your Sensei..." />
+          <div class="input-buttons">
+            <button id="concept-btn" title="Learn a Concept">⚔</button>
+            <button id="question-btn" title="Get 5 Questions">5</button>
+            <button style="background-color: rgb(0, 0, 0)" id="send-btn" title="Send">
+              <img style="width: 12px; height: 12px;" src="assets/images/send1.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

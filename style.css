@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'neue';
+    src: url(assets/fonts/NeueMachina-Light.otf) format('opentype');
+}
+@font-face {
+    font-family: 'neue';
+    src: url(assets/fonts/NeueMachina-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'neue';
+    src: url(assets/fonts/NeueMachina-Ultrabold.otf) format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'neue', sans-serif;
+}
+
+header {
+    background-image: url('assets/images/Gemini_Generated_Image_qzws8dqzws8dqzws.jfif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    position: relative;
+    border: none;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.chat-header {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: yellow;
+    background-color: #000;
+    border-bottom: 1px solid rgba(255, 255, 0, 0.278);
+}
+
+.chat-box {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Increase gap between messages */
+    scroll-behavior: smooth;
+}
+
+.message {
+    max-width: 80%;
+    padding: 1rem; /* Increased padding for better readability */
+    border-radius: 12px;
+    word-wrap: break-word;
+    line-height: 1.6; /* Increased line height for clarity */
+    font-size: 1rem; /* Slightly larger font size */
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(255, 255, 0, 0.334);
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #111;
+    border: 1px solid #333;
+    position: relative;
+}
+
+pre {
+    background-color: #000;
+    color: yellow;
+    padding: 1rem; /* Increased padding for clarity */
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 1rem; /* Added margin-top for space between message and code */
+}
+
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 0.75rem;
+    background: yellow;
+    color: #0A0A0A;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.code-block {
+    position: relative;
+    background: #1c1c1c;
+    color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem; /* Increased margin between code block and surrounding content */
+    overflow-x: auto;
+}
+
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem;
+    background-color: #0A0A0A;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border: 1px solid #333;
+    border-radius: 24px;
+    background-color: #111;
+    color: yellow;
+    outline: none;
+    font-size: 1.05rem; /* Slightly increased font size for better input visibility */
+}
+
+.input-buttons {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.input-buttons button {
+    background-color: #000000;
+    color: yellow;
+    border: 1px solid rgba(255, 255, 0, 0.489);
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-buttons button img {
+    width: 12px;
+    height: 12px;
+}
+.scale-bounce {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+/* Responsive (Tablet/Desktop) */
+@media (min-width: 600px) {
+    .chat-header {
+        font-size: 1.5rem;
+    }
+
+    .message {
+        font-size: 1.1rem;
+    }
+
+    .chat-input-area input {
+        font-size: 1.2rem;
+    }
+
+    .copy-btn {
+        font-size: 0.85rem;
+    }
+
+    .input-buttons button {
+        padding: 0.7rem;
+    }
+}
+
+.typing {
+    display: inline-flex;
+    gap: 4px;
+    font-size: 1.5rem;
+    color: yellow;
+}
+
+.typing span {
+    animation: blink 1s infinite ease-in-out;
+    opacity: 0.2;
+}
+
+.typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
